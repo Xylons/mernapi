@@ -44,11 +44,11 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.json({message:err.message,error:err}); 
+  res.json({message:err.message,error:err});
 });
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Xylons:Francisco1.@cursoweb-xpbvj.mongodb.net/test?retryWrites=true', { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://Xylons:Francisco1.@cursoweb-xpbvj.mongodb.net/mymerndb?retryWrites=true', { useNewUrlParser: true })
     .then(() =>  console.log('mymerndb connection successful'))
     .catch((err) => console.error(err));
 
